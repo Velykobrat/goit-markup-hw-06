@@ -394,8 +394,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .perevagu-list {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 24px;
+    gap: 72px 24px;
     flex-shrink: 0;
 }
 
@@ -576,22 +577,37 @@ height: 100%;
     transform: translateX(0);
 }
 
+
 /*ФУТЕР*/
                                                         
 
 .down-page {
-    display: flex;
+
+    
     background-color: #2e2f42;
-    padding: 100px 0;
+
     max-width: 1440px;
-    height: 312px;
+  
     flex-shrink: 0;
-    gap: 140px;
+   
+    padding-top: 96px;
+    padding-bottom: 96px;
+   
 }
-.down-page .container {
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer-container {
     display: flex;
     align-items: baseline;
-
+  }
 }
 
 .information {
@@ -613,7 +629,7 @@ height: 100%;
 }
 
 .down-page .container:first-child {
-    margin-left: 156px;
+   /* margin-left: 156px;*/
 }
 
 .down-page .infornmation .logo {
@@ -717,11 +733,12 @@ color: #ffffff;
 
 .subscribe-form {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .footer-wrapper {
-    margin-left: 80px;
+    
 }
 
 input[type="email"]::placeholder {
