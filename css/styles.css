@@ -581,18 +581,16 @@ height: 100%;
 /*ФУТЕР*/
                                                         
 
-.down-page {
-
-    
+.footer-page {
     background-color: #2e2f42;
-
-    max-width: 1440px;
-  
-    flex-shrink: 0;
-   
     padding-top: 96px;
     padding-bottom: 96px;
-   
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-page {
+    text-align: center;
+  }
 }
 
 .footer-container {
@@ -601,21 +599,59 @@ height: 100%;
     align-items: center;
     justify-content: center;
     margin: auto;
+    gap: 72px;
 }
 
-@media only screen and (min-width: 1158px) {
+
+
+@media only screen and (min-width: 768px) {
     .footer-container {
-    display: flex;
+    gap: 72px 24px;
+    padding: ;
+  }
+
+  @media only screen and (min-width: 1158px) {
+    .footer-container {
     align-items: baseline;
+    gap: 72px;
   }
 }
 
+  @media only screen and (min-width: 768px) and (max-width: 1158px) {
+    .footer-container {
+    
+    }
+  }
+}  
+/*=======ЛОГО++++ТЕКСТ=========*/
 .information {
     display: inline-block;
     margin: 0;
-    margin-right: 120px
 }
 
+.infornmation .logo {
+    display: inline-block;
+}
+
+.down-section-text {
+    color: #F4F4FD;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-top: 17.5px;
+    text-align: left;
+    max-width: 288px;
+}
+
+@media only screen and (min-width: 768px) {
+    .down-section-text {
+        max-width: 264px;
+  }
+}
+.logo-light {
+    color: #F4F4FD;
+}
+
+/*=======СОЦІАЛЬНІ МЕРЕЖІ=========*/
 .footer-text {
     color: #FFF;
     font-family: Roboto;
@@ -628,43 +664,6 @@ height: 100%;
     margin-top: 0;
 }
 
-.down-page .container:first-child {
-   /* margin-left: 156px;*/
-}
-
-.down-page .infornmation .logo {
-    display: inline-block;
-    margin-bottom: 16px;
-}
-
-.down-section-text {
-    color: #F4F4FD;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    margin-top: 17.5px;
-}
-
-.information .down-section-text {
-    max-width: 264px;
-}
-
-.logo-light {
-    color: #F4F4FD;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-
   .sm-contacts .social-icons {
     display: flex;
     fill: #FFF;
@@ -676,6 +675,70 @@ height: 100%;
     border-radius: 50%;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+/*=======ПІДПИСКА=========*/
+.subscribe-form-icon {
+    fill: #fff;
+    margin-left: 16px;
+}
+
+.subscribe-form  {
+
+}
+
+
+.wrapper-caption /*заголовок "Subscribe"*/{
+color: #FFF;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.32px;
+margin-bottom: 16px;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .subscribe-form-field{
+    margin-left: auto;
+    }
+
+}
+
+
+.subscribe-form-input {
+width: 264px;
+height: 40px;
+flex-shrink: 0;
+border-radius: 4px;
+border: 1px solid #FFF;
+padding-left: 16px;
+background-color: transparent;
+font-size: 12px;
+line-height: 2;
+letter-spacing: 0.04em;
+color: #ffffff;
+margin-bottom: 16px;
+margin-right: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    .subscribe-form-input {
+    width: 100%;
+  }
+}
+input[type="email"]::placeholder {
+    opacity: 1;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 200% */
+    letter-spacing: 0.48px;
 }
 
 .subscribe-form-btn {
@@ -697,60 +760,27 @@ min-width: 165px;
 height: 40px;
 cursor: pointer;
 border: none;
-}
-
-.subscribe-form-icon {
-    fill: #fff;
-    margin-left: 16px;
-}
-
-.wrapper-caption {
-color: #FFF;
-font-family: Roboto;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 150% */
-letter-spacing: 0.32px;
-margin-bottom: 16px;
-}
-
-.subscribe-form-input {
-width: 264px;
-height: 40px;
-flex-shrink: 0;
-border-radius: 4px;
-border: 1px solid #FFF;
-padding-left: 16px;
-background-color: transparent;
-font-size: 12px;
-line-height: 2;
-letter-spacing: 0.04em;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-color: #ffffff;
+max-width: 165px;
+margin: auto;
 }
 
 
-.subscribe-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
 
-.footer-wrapper {
-    
-}
 
-input[type="email"]::placeholder {
-    opacity: 1;
-    color: #ffffff;
-    font-family: Roboto;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 200% */
-    letter-spacing: 0.48px;
-}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
 
 
 /*=====================================*\
