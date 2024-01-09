@@ -436,6 +436,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #f4f4fd;
     border-radius: 4px;
     margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+
 }
 
 .perevagu-list {
@@ -903,6 +906,14 @@ margin: auto;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 72px 24px 24px 24px;
   }
+
+  @media only screen and (max-width: 768px) {
+    .modal {
+        width: 288px;
+        height: 623px;    
+    }
+  }
+
   .modal-btn {
     position: absolute;
     top: 24px;
@@ -939,15 +950,17 @@ margin: auto;
   }
 
   .modal-caption {
+
     color: #2E2F42;
     font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px; /* 150% */
     letter-spacing: 0.32px;
-    width: 360px;
+    max-width: 360px;
     margin-bottom: 16px;
     text-align: center;
+
   }
 
   .modal-form {
@@ -1046,6 +1059,7 @@ margin: auto;
     margin-top: 24px;
     border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: auto;
 }
 
 .modal-checkbox {
